@@ -13,7 +13,6 @@
         - syncthing
         - keepassxc
         - steam
-        - lutris
             
   - name: Enable Flathub repository
     become: yes
