@@ -31,6 +31,9 @@
         - org.signal.Signal
         - md.obsidian.Obsidian
         - com.github.tchx84.Flatseal
+        - org.gimp.GIMP
+        - com.visualstudio.code
+        - org.flameshot.Flameshot
 
   - name: Install Snaps
     community.general.snap:
