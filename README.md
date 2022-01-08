@@ -1,8 +1,10 @@
 # Prerequisites
 
+On Fedora:
 `sudo dnf install ansible ansible-collection-community-general`
 
-Be sure to set the proper machine hostname by navigating to Gnome Settings > About and changing via UI.
+On Ubuntu:
+`sudo add-apt-repository --yes --update ppa:ansible/ansible; sudo apt install ansible`
 
 # Running Playbooks
 
