@@ -1,0 +1,19 @@
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: Enable KXStudio PPA
+    become: yes
+    command: wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_10.0.3_all.deb; sudo dpkg -i kxstudio-repos_10.0.3_all.deb
+      
+  - name: install packages
+    package:
+      name:
+        - flatpak
+        - gnome-software-plugin-flatpak
+        - apt-transport-https 
+        - gpgv
+        - helm
+        - dexed
+        - surge
