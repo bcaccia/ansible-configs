@@ -3,12 +3,16 @@
   become: true
 
   tasks:
-  - name: Enable KXStudio PPA
+  - name: Enable KXStudio Repos
     become: yes
-    command: wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_10.0.3_all.deb; sudo dpkg -i kxstudio-repos_10.0.3_all.deb
+    command: wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_10.0.3_all.deb
+    
+  - name: Install KXStudio Repos
+    become: yes
+    command: dpkg -i kxstudio-repos_10.0.3_all.deb
       
   - name: install packages
-    package:
+    apt:
       name:
         - flatpak
         - gnome-software-plugin-flatpak
@@ -17,3 +21,4 @@
         - helm
         - dexed
         - surge
+      update_cache: yes
