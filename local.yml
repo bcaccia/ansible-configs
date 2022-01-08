@@ -1,0 +1,59 @@
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+  - name: Enable Google Chrome repo
+    become: yes
+    command: dnf config-manager --set-enabled google-chrome
+
+  - name: Enable multimedia codecs
+    become: yes
+    command: dnf groupupdate Multimedia -y
+
+  - name: Enable audio plugins repo
+    community.general.copr:
+      host: copr.fedorainfracloud.org
+      state: enabled
+      name: ycollet/audinux/
+    
+  - name: install packages
+    package:
+      name:
+        - htop
+        - tmux
+        - vim
+        - neofetch
+        - syncthing
+        - keepassxc
+        - google-chrome-stable
+        - snapd
+        - Cadence
+        - surge
+        - Rack-v2
+        - steam
+        - lutris
+            
+  - name: Enable Flathub repository
+    become: yes
+    command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo 
+
+
+  - name: Install Flatpaks
+    community.general.flatpak:
+      name:
+        - com.spotify.Client
+        - com.getpostman.Postman
+        - org.kde.kdenlive
+        - com.slack.Slack
+        - com.discordapp.Discord
+        - com.microsoft.Teams
+        - us.zoom.Zoom
+        - org.signal.Signal
+        - md.obsidian.Obsidian
+        - com.github.tchx84.Flatseal
+
+  - name: Install Snaps
+    community.general.snap:
+      name:
+        - authy
