@@ -11,12 +11,18 @@
     become: yes
     command: dnf groupupdate Multimedia -y
 
-  - name: Enable audio plugins repo
+  - name: Enable audinux repo
     community.general.copr:
       host: copr.fedorainfracloud.org
       state: enabled
       name: ycollet/audinux/
       
+  - name: Enable DISTRHO repo
+    community.general.copr:
+      host: copr.fedorainfracloud.org
+      state: enabled
+      name: teervo/DISTRHO/
+
   - name: install packages
     package:
       name:
@@ -25,4 +31,6 @@
         - Cadence
         - surge
         - Rack-v2
+        - vst-DISTRHO-TAL
+        - vst-DISTRHO-dexed
         - lutris
