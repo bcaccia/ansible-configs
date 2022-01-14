@@ -6,6 +6,10 @@
   become: yes
   command: dpkg -i kxstudio-repos_10.0.3_all.deb
     
+- name: Remove KXStudio Repos Installer
+  become: yes
+  command: rm kxstudio-repos_10.0.3_all.deb    
+    
 - name: install packages
   apt:
     name:
