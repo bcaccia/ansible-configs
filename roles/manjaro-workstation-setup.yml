@@ -1,0 +1,17 @@
+- hosts: localhost
+  connection: local
+  become: true
+
+- name: Run the equivalent of "pacman -Syu" as a separate step
+  community.general.pacman:
+    update_cache: yes
+    upgrade: yes
+      
+  - name: install packages
+    community.general.pacman:
+      name:
+        - helm-synth
+        - dexed
+        - surge
+        - cadence
+        - lutris
