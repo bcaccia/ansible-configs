@@ -10,6 +10,7 @@
         - tmux
         - vim
         - neofetch
+        - fzf
         - syncthing
         - keepassxc
         - steam
