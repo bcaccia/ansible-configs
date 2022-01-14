@@ -13,6 +13,7 @@
         - syncthing
         - keepassxc
         - steam
+        - gnome-tweaks
             
   - name: Enable Flathub repository
     become: yes
