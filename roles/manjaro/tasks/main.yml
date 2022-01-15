@@ -3,11 +3,11 @@
     update_cache: yes
     upgrade: yes
       
-  - name: install packages
-    community.general.pacman:
-      name:
-        - helm-synth
-        - dexed
-        - surge
-        - cadence
-        - lutris
+- name: install packages
+  community.general.pacman:
+    name:
+      - helm-synth
+      - dexed
+      - surge
+      - cadence
+      - lutris
