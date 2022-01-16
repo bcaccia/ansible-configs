@@ -33,6 +33,7 @@
       - com.visualstudio.code
       - org.flameshot.Flameshot
       - com.mattjakeman.ExtensionManager
+      - org.gimp.GIMP
 
 - name: Install Snaps
   community.general.snap:
