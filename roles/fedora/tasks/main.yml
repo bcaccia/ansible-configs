@@ -18,6 +18,12 @@
     host: copr.fedorainfracloud.org
     state: enabled
     name: teervo/DISTRHO/
+    
+- name: Enable Dexed repo
+  community.general.copr:
+    host: copr.fedorainfracloud.org
+    state: enabled
+    name: audron/dexed
 
 - name: install packages
   package:
@@ -27,6 +33,6 @@
       - Cadence
       - surge
       - Rack-v2
-      - vst-DISTRHO-TAL
-      - vst-DISTRHO-dexed
+      - vst-DISTRHO\*
+      - dexed
       - lutris
