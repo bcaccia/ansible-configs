@@ -34,6 +34,8 @@
       - org.flameshot.Flameshot
       - com.mattjakeman.ExtensionManager
       - org.gimp.GIMP
+      - com.uploadedlobster.peek
+      - org.freedesktop.Platform.ffmpeg-full
 
 - name: Install Snaps
   community.general.snap:
