@@ -33,7 +33,10 @@
       - Cadence
       - surge
       - Rack-v2
-      - vst-DISTRHO\*
       - dexed
       - lutris
       - gnome-shell-extension-appindicator
+
+- name: Install audio plugins
+  become: yes
+  command: dnf install vst-DISTRHO\*
