@@ -39,4 +39,4 @@
 
 - name: Install audio plugins
   become: yes
-  command: dnf install vst-DISTRHO\*
+  command: dnf install vst-DISTRHO\* -y
