@@ -35,7 +35,8 @@
       - com.mattjakeman.ExtensionManager
       - org.gimp.GIMP
       - com.uploadedlobster.peek
-      - org.freedesktop.Platform.ffmpeg-full
+      # Need to manually run this one as it presents several versions and we always want the latest
+      #- org.freedesktop.Platform.ffmpeg-full
 
 - name: Install Snaps
   community.general.snap:
