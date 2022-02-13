@@ -35,6 +35,8 @@
       - com.mattjakeman.ExtensionManager
       - org.gimp.GIMP
       - com.uploadedlobster.peek
+      - de.haeckerfelix.Fragments
+      - org.gustavoperedo.FontDownloader
       # Need to manually run this one as it presents several versions and we always want the latest
       #- org.freedesktop.Platform.ffmpeg-full
 
